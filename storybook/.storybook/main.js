@@ -12,6 +12,7 @@ module.exports = {
     //  ../../packages/webcomponents/dist/stories/*.stories.@(js|jsx)
     // è quindi necessario fare il build in caso di typescript
     
+    
     "../../packages/webcomponents/**/stories/*.stories.@(js|jsx)"
   
   ],
