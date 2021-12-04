@@ -1,5 +1,5 @@
 {
-  "name": "frydon-icon",
+  "name": "@frydonlee/frydon-icon",
   "description": "Webcomponent frydon-icon following open-wc recommendations",
   "license": "MIT",
   "author": "frydon-icon",
@@ -84,5 +84,13 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frydonlee/frydon-webcomponents.git",
+    "directory": "packages/webcomponents/frydon-icon"
   }
 }
