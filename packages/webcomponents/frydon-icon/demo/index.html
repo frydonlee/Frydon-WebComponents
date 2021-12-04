@@ -13,13 +13,14 @@
 
   <script type="module">
     import { html, render } from 'lit';
-    import '../dist/src/frydon-tabs.js';
+    import '../dist/src/frydon-icon.js';
 
-    const tabs = [{label:"aaa"},{label:"bbb"},{label:"ccc"}];
+    const title = 'Hello owc World!';
     render(
       html`
-        <frydon-tabs .tabs=${tabs}>
-        </frydon-tabs>
+        <frydon-icon .title=${title}>
+          some light-dom
+        </frydon-icon>
       `,
       document.querySelector('#demo')
     );
