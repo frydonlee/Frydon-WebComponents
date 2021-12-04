@@ -22,6 +22,7 @@
     "storybook:build": "tsc && build-storybook"
   },
   "dependencies": {
+    "@vaadin/tabs": "^22.0.0",
     "acorn": "^8.5.0",
     "lit": "^2.0.0-rc.2"
   },

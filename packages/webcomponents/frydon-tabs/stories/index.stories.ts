@@ -5,9 +5,7 @@ export default {
   title: 'FrydonTabs',
   component: 'frydon-tabs',
   argTypes: {
-    title: { control: 'text' },
-    counter: { control: 'number' },
-    textColor: { control: 'color' },
+    tabs: { control: 'array' },
   },
 };
 
@@ -18,43 +16,16 @@ interface Story<T> {
 }
 
 interface ArgTypes {
-  title?: string;
-  counter?: number;
-  textColor?: string;
-  slot?: TemplateResult;
+  tabs?: Array<string>;
 }
 
 const Template: Story<ArgTypes> = ({
-  title = 'Hello world',
-  counter = 5,
-  textColor,
-  slot,
-}: ArgTypes) => html`
-  <frydon-tabs
-    style="--frydon-tabs-text-color: ${textColor || 'black'}"
-    .title=${title}
-    .counter=${counter}
-  >
-    ${slot}
-  </frydon-tabs>
-`;
+  tabs = ['xxxx', 'yyyy'],
+}: ArgTypes) => html` <frydon-tabs .tabs=${tabs}> </frydon-tabs> `;
 
 export const Regular = Template.bind({});
 
-export const CustomTitle = Template.bind({});
-CustomTitle.args = {
-  title: 'My title',
-};
-
-export const CustomCounter = Template.bind({});
-CustomCounter.args = {
-  counter: 123456,
-};
-
-export const SlottedContent = Template.bind({});
-SlottedContent.args = {
-  slot: html`<p>Slotted content</p>`,
-};
-SlottedContent.argTypes = {
-  slot: { table: { disable: true } },
+export const CustomTabs = Template.bind({});
+CustomTabs.args = {
+  tabs: ['a', 'b'],
 };

@@ -1,5 +1,6 @@
 import { html, css, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
+import '@vaadin/tabs';
 
 export class FrydonTabs extends LitElement {
   static styles = css`
@@ -10,19 +11,14 @@ export class FrydonTabs extends LitElement {
     }
   `;
 
-  @property({ type: String }) title = 'Hey there';
-
-  @property({ type: Number }) counter = 5;
-
-  __increment() {
-    this.counter += 1;
-  }
+  @property({ type: Array }) tabs: Array<string> = [];
 
   render() {
     return html`
       <h1>TABS</h1>
-      <h2>${this.title} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
+      <vaadin-tabs selected="3">
+        ${this.tabs.map(tabs => html` <vaadin-tab>${tabs}</vaadin-tab> `)}
+      </vaadin-tabs>
     `;
   }
 }
