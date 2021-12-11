@@ -3,7 +3,7 @@
   "description": "Webcomponent frydon-icon following open-wc recommendations",
   "license": "MIT",
   "author": "frydon-icon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
