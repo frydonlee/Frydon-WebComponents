@@ -15,11 +15,10 @@
     import { html, render } from 'lit';
     import '../dist/src/frydon-icon.js';
 
-    const title = 'Hello owc World!';
+    const icon = 'ghost';
     render(
       html`
-        <frydon-icon .title=${title}>
-          some light-dom
+        <frydon-icon .icon=${icon}>
         </frydon-icon>
       `,
       document.querySelector('#demo')

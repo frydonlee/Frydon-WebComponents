@@ -5,9 +5,7 @@ export default {
   title: 'FrydonIcon',
   component: 'frydon-icon',
   argTypes: {
-    title: { control: 'text' },
-    counter: { control: 'number' },
-    textColor: { control: 'color' },
+    icon: { control: 'text' },
   },
 };
 
@@ -18,43 +16,16 @@ interface Story<T> {
 }
 
 interface ArgTypes {
-  title?: string;
-  counter?: number;
-  textColor?: string;
-  slot?: TemplateResult;
+  icon?: string;
 }
 
-const Template: Story<ArgTypes> = ({
-  title = 'Hello world',
-  counter = 5,
-  textColor,
-  slot,
-}: ArgTypes) => html`
-  <frydon-icon
-    style="--frydon-icon-text-color: ${textColor || 'black'}"
-    .title=${title}
-    .counter=${counter}
-  >
-    ${slot}
-  </frydon-icon>
+const Template: Story<ArgTypes> = ({ icon = 'ban' }: ArgTypes) => html`
+  <frydon-icon .icon=${icon}> </frydon-icon>
 `;
 
 export const Regular = Template.bind({});
 
-export const CustomTitle = Template.bind({});
-CustomTitle.args = {
-  title: 'My title',
-};
-
-export const CustomCounter = Template.bind({});
-CustomCounter.args = {
-  counter: 123456,
-};
-
-export const SlottedContent = Template.bind({});
-SlottedContent.args = {
-  slot: html`<p>Slotted content</p>`,
-};
-SlottedContent.argTypes = {
-  slot: { table: { disable: true } },
+export const CustomIcon = Template.bind({});
+CustomIcon.args = {
+  icon: 'ghost',
 };
