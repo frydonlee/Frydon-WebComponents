@@ -21,12 +21,12 @@ interface ArgTypes {
 }
 
 const Template: Story<ArgTypes> = ({
-  tabs = [{label:"aaa"},{label:"bbb"},{label:"ccc"}],
+  tabs = [{label:"tab1"},{label:"tab2"},{label:"tab3"}],
 }: ArgTypes) => html` <frydon-tabs .tabs=${tabs}> </frydon-tabs> `;
 
 export const Regular = Template.bind({});
 
 export const CustomTabs = Template.bind({});
 CustomTabs.args = {
-  tabs: [{label:"aaa"},{label:"bbb"},{label:"ccc"}],
+  tabs: [{label:"Hello"},{label:"World"},{label:"!!!"}],
 };

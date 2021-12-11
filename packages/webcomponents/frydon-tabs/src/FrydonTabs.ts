@@ -3,6 +3,7 @@ import { property } from 'lit/decorators.js';
 import '@vaadin/tabs';
 import { Tab } from './interface.js';
 
+
 export class FrydonTabs extends LitElement {
   static styles = css`
     :host {
@@ -16,9 +17,14 @@ export class FrydonTabs extends LitElement {
 
   render() {
     return html`
-      <h1>TABS</h1>
       <vaadin-tabs selected="3">
-        ${this.tabs.map(tabs => html` <vaadin-tab>${tabs.label}</vaadin-tab> `)}
+        ${this.tabs.map(
+          tab => html ` <vaadin-tab>
+                          ${tab.label}
+
+                        </vaadin-tab>
+                      `
+        )}
       </vaadin-tabs>
     `;
   }

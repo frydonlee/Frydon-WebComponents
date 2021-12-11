@@ -4,26 +4,14 @@ import { FrydonTabs } from '../src/FrydonTabs.js';
 import '../src/frydon-tabs.js';
 
 describe('FrydonTabs', () => {
-  it('has a default title "Hey there" and counter 5', async () => {
-    const el = await fixture<FrydonTabs>(html`<frydon-tabs></frydon-tabs>`);
 
-    expect(el.title).to.equal('Hey there');
-    // expect(el.counter).to.equal(5);
-  });
-
-  it('increases the counter on button click', async () => {
-    const el = await fixture<FrydonTabs>(html`<frydon-tabs></frydon-tabs>`);
-    el.shadowRoot!.querySelector('button')!.click();
-
-    // expect(el.counter).to.equal(6);
-  });
-
-  it('can override the title via attribute', async () => {
+  it('can override the tabs via attribute', async () => {
+    const tabs = [{label:"tab1"},{label:"tab2"},{label:"tab3"}];
     const el = await fixture<FrydonTabs>(
-      html`<frydon-tabs title="attribute title"></frydon-tabs>`
+      html`<frydon-tabs .tabs=${tabs}></frydon-tabs>`
     );
 
-    expect(el.title).to.equal('attribute title');
+    expect(el.tabs).to.equal(tabs);
   });
 
   it('passes the a11y audit', async () => {
