@@ -25,7 +25,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "acorn": "^7.4.1",
+    "acorn": "^8.5.0",
     "lit": "^2.0.0-rc.2",
     "wc-fontawesome": "^0.3.0"
   },

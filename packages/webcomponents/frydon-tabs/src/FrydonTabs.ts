@@ -1,8 +1,8 @@
 import { html, css, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 import '@vaadin/tabs';
+import '@frydonlee/frydon-icon/frydon-icon.js';
 import { Tab } from './interface.js';
-
 
 export class FrydonTabs extends LitElement {
   static styles = css`
@@ -19,11 +19,12 @@ export class FrydonTabs extends LitElement {
     return html`
       <vaadin-tabs selected="3">
         ${this.tabs.map(
-          tab => html ` <vaadin-tab>
-                          ${tab.label}
-
-                        </vaadin-tab>
-                      `
+          tab => html`
+            <vaadin-tab>
+              ${tab.label}
+              <frydon-icon icon="ghost"> </frydon-icon>
+            </vaadin-tab>
+          `
         )}
       </vaadin-tabs>
     `;
