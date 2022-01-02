@@ -3,7 +3,7 @@
   "description": "Webcomponent frydon-tabs following open-wc recommendations",
   "license": "MIT",
   "author": "frydon-tabs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
@@ -22,7 +22,7 @@
     "storybook:build": "tsc && build-storybook"
   },
   "dependencies": {
-    "@frydonlee/frydon-icon": "^0.0.2",
+    "@frydonlee/frydon-icon": "^0.0.3",
     "@vaadin/tabs": "^22.0.0",
     "acorn": "^8.5.0",
     "lit": "^2.0.0-rc.2"
